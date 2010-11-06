@@ -5,7 +5,7 @@
 <script type="text/javascript">
 
 $(function() {
-  for (var i=0; i<25; i++) {
+  for (var i=0; i<20; i++) {
     $('#nextChurch').append('Testing ' + i + '... ')
                     .append((testRoundTrip(i)) ? 'passed' : 'failed')
                     .append('!<br>');
@@ -20,6 +20,7 @@ $(function() {
 </head>
 <body>
   <h2>Church Numerals in JavaScript</h2>
+  <p>See <code>church.js</code> for the fun part.</p>
   <div id="nextChurch">Testing Church numerals created by repeated applications of <code>nextChurch</code>: <br></div>
   <hr>
   <div id="churchOne">Testing the explicit <code>churchOne</code> variable: </div>
