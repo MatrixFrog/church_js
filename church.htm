@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="church.js"></script>
+<script type="text/javascript">
+
+$(function() {
+  for (var i=0; i<25; i++) {
+    $('#nextChurch').append('Testing ' + i + '... ')
+                    .append((testRoundTrip(i)) ? 'passed' : 'failed')
+                    .append('!<br>');
+  }
+  
+  $('#churchOne').append(testChurch(churchOne, 1) ? 'passed!' : 'failed!');
+  
+  $('#churchTwo').append(testChurch(churchTwo, 2) ? 'passed!' : 'failed!');
+});
+
+</script>
+</head>
+<body>
+  <h2>Church Numerals in JavaScript</h2>
+  <div id="nextChurch">Testing Church numerals created by repeated applications of <code>nextChurch</code>: <br></div>
+  <hr>
+  <div id="churchOne">Testing the explicit <code>churchOne</code> variable: </div>
+  <hr>
+  <div id="churchTwo">Testing the explicit <code>churchTwo</code> variable: </div>
+</body>                                                                 
+</html>
